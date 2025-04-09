@@ -1,3 +1,8 @@
+const getUsersWithFriend = (users, friendName) => {
+  return users.filter((user) => user.friends.includes(friendName));
+};
+  
+
 const allUsers = [
   {
     name: "Moore Hensley",
@@ -28,20 +33,6 @@ const allUsers = [
     friends: ["Goldie Gentry", "Briana Decker"]
   }
 ];
-
-
-const getUsersWithFriend = (allUsers, friendName) => {
-  let friendsOnly =  allUsers.filter((user) => user.friends === friendName);
-};
-  
-
-
-  
-//   console.log(getUsersWithFriend)})
-// // .flatMap(user => (user.friends))
-// ;
-
-
 
 console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
 // [
